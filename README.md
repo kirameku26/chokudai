@@ -1,0 +1,2 @@
+# homebrew-chokudai
+Spwan chokudai
