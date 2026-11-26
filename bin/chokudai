@@ -17,9 +17,38 @@ Commands:
   help         Show this help message
 
 Options:
-  -v, --version    Show version
-  -h, --help       Show this help message
-  -h, --help       Display "ﾃﾞﾃﾞﾝ!"
+  -v, --version                     Show version
+  -h, --help                        Show this help message
+  -d, --deden                       Display "ﾃﾞﾃﾞﾝ!"
+  -s [string], --say [string]       Display any string
+EOF
+}
+
+summon_say() {
+    cat <<'EOF'
+                        /
+                       / (//./\\\)
+                  (/////////\\\\\\\)
+                (/////////////\\\\\\\)
+              (//////////////   \\\\\\)
+            (//////////////       \\\\\\\)
+           (/////////////           \\\\\)
+EOF
+    printf '%s%s\n' '           (/////////// /       __  \\\\\\)      <  ' "$1"
+    cat <<'EOF'
+          (//////////--      `** *`  \\\\\)
+          (/////// ____       ---->  \\\\\)
+          (//////    ~        ''      \\\)
+           (///        /     \        \\)
+             \\     /   `---'    \     /
+               (    \ <=------=^*/    )
+                 (     ``'''''`      )
+                  |\                /|
+                  |  `\          /'  |
+                  |     ``-----''     \
+                /#/                    \##`\
+            /####/\                   / \####`\
+       /########/  \                /'   \########`\
 EOF
 }
 
@@ -84,6 +113,9 @@ case "$1" in
         ;;
     -d|--deden)
         summon_deden
+        ;;
+    -s|--say)
+        summon_say "$2"
         ;;
     "")
         summon
